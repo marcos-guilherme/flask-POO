@@ -1,0 +1,57 @@
+body {
+  background-image: url('/static/images/fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #847e7e;
+}
+
+#hero h1 {
+  font-size: 2em;
+  color: floralwhite;
+}
+
+#hero p {
+  font-size: 1em;
+  color: floralwhite;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#actions a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+#actions button {
+  margin-top: 20px;
+}
+
+.logo-ai {
+  position: inherit;
+  top: 500px;
+  left: 100px;
+  right: 800px;
+}
