@@ -23,7 +23,7 @@ def register():
 
 @app.route('/recuperar_senha', methods=['GET','POST'])
 def recuperar_senha():
-    return render_template('recuperar_senha.')
+    return render_template('recuperar_senha.html')
 
 #Fins de teste com BD
 @app.route('/<name>/<loc>')
