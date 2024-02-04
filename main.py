@@ -10,7 +10,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-
+#Rota para o login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     return render_template('login.html')
@@ -19,7 +19,6 @@ def login():
 #Rota para tratar o registro
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    
     return render_template('register.html')
 
 
@@ -31,13 +30,6 @@ def db_test(name, loc):
     db.session.commit()
 
     return '<h1>Added new User</h1>'
-
-
-
-
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
