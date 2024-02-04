@@ -16,7 +16,7 @@ body {
     display: block;
     width: 200px; 
     height: 150px;
-    background-image: url('/static/images/arvore.png');
+    background-image: url('../images/arvore.png');
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 10px;

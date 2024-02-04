@@ -8,6 +8,10 @@
 </head>
 <body>
     <form id="registro", method="post">
+        <div class="form-group">
+            <label for="logo" class="imagem-label"></label>
+        </div>
+
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required>
 
@@ -17,7 +21,19 @@
         <label for="password">Senha:</label>
         <input type="password" id="password" name="password" required>
 
-        <button type="submit">Registrar</button>
+        <label for="password2">Confirmar Senha:</label>
+        <input type="password2" id="password2" name="password2" required>
+
+        <label for="empresa">Empresa:</label>
+        <input type="empresa" id="empresa" name="empresa" required>
+
+        <label for="cidade">Cidade:</label>
+        <input type="cidade" id="cidade" name="cidade" required>
+
+        <label for="telephone">Telephone:</label>
+        <input type="telephone" id="telephone" name="telephone" required>
+
+        <button type="submit" href="{{ url_for('login') }}">Registrar</button>
     </form>
 
 </body>
