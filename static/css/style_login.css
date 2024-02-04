@@ -64,7 +64,7 @@ form {
 }
 
 .form-group input {
-    width: 90%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #36A1B9;
     border-radius: 4px;
@@ -90,6 +90,6 @@ button:hover {
     margin-bottom: 15px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=senha] {
     width: 85%;
 }
