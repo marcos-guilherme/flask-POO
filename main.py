@@ -1,4 +1,3 @@
-from curses import flash
 from flask import Flask
 from flask import render_template, request, redirect, url_for
 from database import db
