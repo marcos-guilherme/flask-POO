@@ -53,15 +53,14 @@ def login():
 def register():
     if request.method == 'POST':
         username = request.form['username']
-        email = request.form['email']
         pwd = request.form['password']
 
-        if user_exists(username, email):
+        if user_exists(username, username):
                 #Se o usuário já existe no BD4
                 return render_template('register.html')
         else:
                 
-            new_user = User(username=username, email=email, password=pwd)
+            new_user = User(username=username,password=pwd)
             db.session.add(new_user)
             db.session.commit()
 
@@ -73,6 +72,12 @@ def register():
 @app.route('/recuperar_senha', methods=['GET','POST'])
 def recuperar_senha():
     return render_template('recuperar_senha.html')
+
+
+@app.route('/contato', methods=['GET','POST'])
+def contato():
+    return render_template('contato.html')
+
 
 #Fins de teste com BD
 @app.route('/<name>/<loc>')
