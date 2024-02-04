@@ -26,7 +26,7 @@ def user_exists(username, email):
     user = User.query.filter((User.username == username) | (User.email == email)).first()
     return user is not None
 
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('index.html')
 
@@ -43,7 +43,7 @@ def login():
             return redirect(url_for('login'))
         
         login_user(user)
-        redirect(url_for('/'))
+        return redirect(url_for('home'))
 
     return render_template('login.html')
 
