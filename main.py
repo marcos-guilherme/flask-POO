@@ -1,6 +1,6 @@
+from curses import flash
 from flask import Flask
 from flask import render_template, request, redirect, url_for
-from forms import LoginForm
 from database import db
 from models import User
 
@@ -11,20 +11,15 @@ def home():
     return render_template('index.html')
 
 
-#Rota para tratar o Login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        username = form.username.data
-        password = form.password.data
-
-    return render_template('login_form.html', form=form)
+    return render_template('login.html')
 
 
 #Rota para tratar o registro
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    
     return render_template('register.html')
 
 
