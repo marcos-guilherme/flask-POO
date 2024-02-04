@@ -1,13 +1,15 @@
 from flask import Flask, render_template
-
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return render_template('index.html')
+from database import db
+from main import app
 
 
+#Configuração do BD
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+db.init_app(app)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#Criação das tabelas a partir dos models
+with app.app_context():
+    db.create_all()
+
+
 
