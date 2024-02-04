@@ -11,15 +11,27 @@
             <p class="error">{{ error }}</p>
         {% endif %}
         <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
+            <label for="logo" class="logo-label"></label>
         </div>
         <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+            <label style="font-size: 32px" for="Log In">Log In</label>
         </div>
         <div class="form-group">
-            <button type="submit">Login</button>
+            <label for="Email">Email:</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="senha" id="senha" name="senha">
+        </div>
+        <div class="form-group">
+            <button type="submit">Entrar</button>
+        </div>
+        <div class="form-group link-group">
+            <a for="esqueceu a senha?" class = "outras-paginas" href="{{ url_for('recuperar_senha') }}">Esqueceu a Senha?</a>
+            <span></span>
+            <a for="criar conta" class = "outras-paginas" href="{{url_for('register')}}">Criar Conta</a>
+        </ul>
         </div>
     </form>
 </body>

@@ -23,25 +23,6 @@ body {
     margin-left: 80px;
 }
 
-.link-group{
-    text-align: center;
-}
-
-
-.outras-paginas{
-    display: inline;
-    margin-right: 5px;
-    text-decoration: none;
-    margin-bottom: 10px;
-    color: #36A1B9;
-}
-
-.link-group span{
-    display:inline;
-    margin: 0 30px;
-}
-
-
 form {
     background: #fff;
     padding: 80px;
