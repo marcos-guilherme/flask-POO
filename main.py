@@ -1,9 +1,11 @@
+from flask import flash
 from flask import Flask
 from database import db
 from flask import render_template, request, redirect, url_for
 from models import User
 from flask_login import login_user, logout_user
 from extensions import login_manager
+from werkzeug.security import check_password_hash
 import secrets
 
 app = Flask(__name__)
@@ -12,6 +14,7 @@ app.secret_key = secrets.token_hex(16)
 
 #Configuração do BD
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+
 
 login_manager.init_app(app)
 db.init_app(app)
@@ -36,10 +39,10 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         senha = request.form['senha']
-
         user = User.query.filter_by(email=email).first()
 
-        if not user or not user.verify(senha):
+        if user is None or not check_password_hash(user.password, senha):
+            flash('Email ou senha incorreto, por favor tente novamente.')
             return redirect(url_for('login'))
         
         login_user(user)
@@ -52,19 +55,27 @@ def login():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
+        email = request.form['email']
         username = request.form['username']
         pwd = request.form['password']
+        empresa = request.form['empresa']
+        estado = request.form['estado']
+        telefone = request.form['telephone']
 
-        if user_exists(username, username):
-                #Se o usuário já existe no BD4
-                return render_template('register.html')
-        else:
+        user = User.query.filter((User.username == username) | (User.email == email)).first()
+
+        if user:
+
+            flash('Email ou Usuário já em uso.')
+            return render_template('register.html')
+
                 
-            new_user = User(username=username,password=pwd)
-            db.session.add(new_user)
-            db.session.commit()
+        new_user = User(username=username,password=pwd, empresa=empresa,
+                            email=email, telefone=telefone, estado=estado)
+        db.session.add(new_user)
+        db.session.commit()
 
-            return redirect(url_for('login'))
+        return redirect(url_for('login'))
     
     return render_template('register.html')
 
@@ -77,16 +88,6 @@ def recuperar_senha():
 @app.route('/contato', methods=['GET','POST'])
 def contato():
     return render_template('contato.html')
-
-
-#Fins de teste com BD
-@app.route('/<name>/<loc>')
-def db_test(name, loc):
-    user = User(name=name, location=loc)
-    db.session.add(user)
-    db.session.commit()
-
-    return '<h1>Added new User</h1>'
 
 
 

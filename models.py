@@ -11,19 +11,26 @@ def get_user(user_id):
 
 
 
-
-
 #Teste de criação de Models
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, autoincrement=True ,primary_key=True)
     username = db.Column(db.String(86), nullable=False, unique=True)
     email = db.Column(db.String(86), nullable=False, unique=True)
     password = db.Column(db.String(128), nullable=False)
+    empresa = db.Column(db.String(128), nullable=False)
+    estado = db.Column(db.String(16), nullable=False)
+    telefone = db.Column(db.String(128), nullable=False)
 
-    def __init__(self, username, email, password):
+
+
+    def __init__(self, username, email, password, empresa, estado, telefone):
         self.username = username
         self.email = email
         self.password = generate_password_hash(password)
+        self.empresa = empresa
+        self.estado = estado
+        self.telefone = telefone
+
 
     def verify(self, pwd):
         return check_password_hash(self.password, pwd) 

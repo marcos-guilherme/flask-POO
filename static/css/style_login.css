@@ -67,7 +67,7 @@ form {
 
 .form-group {
     margin-bottom: 20px;
-    width: auto;
+    width: 100%;
     padding-right: 0;
     margin-right: 0;
 }
@@ -78,7 +78,7 @@ form {
 }
 
 .form-group input {
-    width: 100%;
+    width: 100% !important;
     padding: 10px;
     border: 1px solid #36A1B9;
     border-radius: 4px;
