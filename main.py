@@ -26,7 +26,7 @@ def user_exists(username, email):
     user = User.query.filter((User.username == username) | (User.email == email)).first()
     return user is not None
 
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('index.html')
 

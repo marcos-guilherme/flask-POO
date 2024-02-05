@@ -5,5 +5,18 @@
     <title>Recuperar_senha</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_recuperar_senha.css') }}">
 </head>
-<body></body>
+<body>
+    <form action = "/recuperar_senha" method= "post">
+        <div class="form-group">
+            <label for="logo" class="logo-label"></label>
+        </div>
+        <div class = "form-group">
+            <label for = "email">Email: </label>
+            <input type = "text" id = "email" name = "email" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Enviar Codigo de Verificação</button>
+        </div>
+    </form>
+</body>
 </html>

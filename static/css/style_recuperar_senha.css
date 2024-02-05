@@ -1,36 +1,42 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
     background-image: url('../images/fundo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: auto;
 }
 
+
+form {
+    background: #fff;
+    padding: 50px;
+    align-self: center;
+    margin-top: 20vh;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+    min-width: 200px;
+}
+
 .logo-label {
     display: block;
     width: 200px; 
     height: 150px;
+    align-self: center;
     background-image: url('/static/images/arvore.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-bottom: 10px;
-    margin-left: 80px;
+    margin-left: 65px;
 }
 
-form {
-    background: #fff;
-    padding: 80px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 300px;
-    min-width: 300px;
-}
 
 .form-group {
     margin-bottom: 20px;
@@ -45,14 +51,14 @@ form {
 }
 
 .form-group input {
-    width: 100%;
+    width: 300px;
     padding: 10px;
     border: 1px solid #36A1B9;
     border-radius: 4px;
 }
 
 button {
-    padding: 10px 25px;
+    padding: 10px 39px;
     margin-right: auto;
     border: none;
     border-radius: 4px;

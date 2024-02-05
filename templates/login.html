@@ -24,13 +24,15 @@
             <label for="senha">Senha:</label>
             <input type="senha" id="senha" name="senha" required>
         </div>
-        <div class="form-group">
+        <div class="form-group link-group-2">
             <button type="submit" href="{{ url_for('home')}}">Entrar</button>
+            <span></span>
+            <a for="voltar" class = "outras-paginas-vermelho" href="{{ url_for('home') }}">Voltar</a>
         </div>
         <div class="form-group link-group">
-            <a for="esqueceu a senha?" class = "outras-paginas" href="{{ url_for('recuperar_senha') }}">Esqueceu a Senha?</a>
+            <a for="esqueceu a senha?" class = "outras-paginas-azul" href="{{ url_for('recuperar_senha') }}">Esqueceu a Senha?</a>
             <span></span>
-            <a for="criar conta" class = "outras-paginas" href="{{url_for('register')}}">Criar Conta</a>
+            <a for="criar conta" class = "outras-paginas-azul" href="{{url_for('register')}}">Criar Conta</a>
         </ul>
         </div>
     </form>
