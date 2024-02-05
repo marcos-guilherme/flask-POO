@@ -13,6 +13,7 @@ app.secret_key = secrets.token_hex(16)
 #Configuração do BD
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
 
+
 login_manager.init_app(app)
 db.init_app(app)
 
@@ -36,7 +37,6 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         senha = request.form['senha']
-
         user = User.query.filter_by(email=email).first()
 
         if not user or not user.verify(senha):
@@ -52,15 +52,20 @@ def login():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
+        email = request.form['email']
         username = request.form['username']
         pwd = request.form['password']
+        empresa = request.form['empresa']
+        estado = request.form['estado']
+        telefone = request.form['telephone']
 
         if user_exists(username, username):
                 #Se o usuário já existe no BD4
                 return render_template('register.html')
         else:
                 
-            new_user = User(username=username,password=pwd)
+            new_user = User(username=username,password=pwd, empresa=empresa,
+                            email=email, telefone=telefone, estado=estado)
             db.session.add(new_user)
             db.session.commit()
 
