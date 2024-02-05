@@ -89,7 +89,9 @@ def recuperar_senha():
 def contato():
     return render_template('contato.html')
 
-
+@app.route('/clientes', methods=['GET','POST'])
+def clientes():
+    return render_template('clientes.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
