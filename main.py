@@ -2,8 +2,8 @@ from flask import flash
 from flask import Flask
 from database import db
 from flask import render_template, request, redirect, url_for
-from models import User
-from flask_login import login_user, logout_user
+from models import User, Cliente
+from flask_login import login_user, logout_user, login_required, current_user
 from extensions import login_manager
 from werkzeug.security import check_password_hash
 import secrets
@@ -90,9 +90,33 @@ def recuperar_senha():
 def contato():
     return render_template('contato.html')
 
-
-@app.route('/clientes', methods=['GET', 'POST'])
+@app.route('/clientes')
 def clientes():
+    return render_template('clientes.html')
+
+@app.route('/adicionar_cliente', methods=['GET', 'POST'])
+@login_required
+def adicionar_cliente():
+    if request.method == 'POST':
+        genero = request.form['genero']
+        idade = request.form['idade']
+        nome = request.form['nome']
+        cpf = request.form['cpf']
+        cond = request.form['cond']
+
+        cliente_existe = Cliente.query.filter_by(cpf=cpf, user_id=current_user.id).first()
+
+        if cliente_existe:
+            flash('Já existe um cliente com este CPF para o usuário atual.')
+            return redirect(url_for('clientes'))
+
+        novo_cliente = Cliente(genero=genero, idade=idade, nome=nome, cpf=cpf, cond=cond, user_id=current_user.id)
+        db.session.add(novo_cliente)
+        db.session.commit()
+
+        flash('Cliente adicionado com sucesso.')
+        return redirect(url_for('clientes'))
+    
     return render_template('clientes.html')
 
 

@@ -25,8 +25,18 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center my-5">
-                        <h1 class="display-5 fw-bolder text-white mb-2">Adicione Clientes: </h1>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                          <ul class=flashes>
+                          {% for message in messages %}
+                            <li>{{ message }}</li>
+                          {% endfor %}
+                          </ul>
+                        {% endif %}
+                      {% endwith %}
+                      <h1 class="display-5 fw-bolder text-white mb-2">Adicione Clientes: </h1>
+                      <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                            <form action="/clientes", method="post">
                             <div class="form-group">
                                 <label for="logo" class="logo-label"></label>
                                 <label for="genero">Genero:</label>
@@ -70,10 +80,8 @@
                                     <option value="Media">Media</option>
                                     <option value="Alta">Alta</option>
                                 </select>
-                                <p>
-                                    <button type="submit" href="{{ url_for('login') }}">Adicionar</button>
-
-                                </p>
+                                <input type="submit" value="Enviar">
+                            </form>
                             </div>
                         </div>
                     </div>

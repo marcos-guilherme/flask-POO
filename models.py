@@ -8,6 +8,23 @@ from extensions import login_manager
 def get_user(user_id):
     return User.query.filter_by(id=user_id)
 
+class Cliente(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    genero = db.Column(db.String(64), nullable=False)
+    idade = db.Column(db.Integer, nullable=False)
+    nome = db.Column(db.String(128), nullable=False)
+    cpf = db.Column(db.String(128), nullable=False, unique=True)
+    cond = db.Column(db.String(16), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    def __init__(self, genero, idade, nome, cpf, cond, user_id):
+        self.genero = genero
+        self.idade = idade
+        self.nome = nome
+        self.cpf = cpf
+        self.cond = cond
+        self.user_id = user_id
+
 
 
 
@@ -20,6 +37,7 @@ class User(db.Model, UserMixin):
     empresa = db.Column(db.String(128), nullable=False)
     estado = db.Column(db.String(16), nullable=False)
     telefone = db.Column(db.String(128), nullable=False)
+    clientes = db.relationship('Cliente', backref='user', lazy=True)
 
 
 
