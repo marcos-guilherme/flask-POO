@@ -1,342 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Home - IA para previsão de demanda</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Responsive navbar-->
-        <nav     class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container px-5">
-                <a class="navbar-brand" style="font-size:24px;" href="#features">DecisionAI</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="btn btn-primary" style="font-size:20px; padding: 5px 20px" style = "background-image: url('static\images\Retangulo_azul.jpeg');" href="{{ url_for('clientes') }}">Enter_temporario</a></li>
-                        <li class="nav-item"><a class="nav-link active" style="font-size:24px;" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" style="font-size:24px;" href="#features">About</a></li>
-                        <li class="nav-item"><a class="nav-link" style="font-size:24px;" href="#servico">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" style="font-size:24px;" href="#contato">Contact</a></li>
-                        <li class="nav-item"><a class="btn btn-primary" style="font-size:20px; padding: 5px 20px" style = "background-image: url('static\images\Retangulo_azul.jpeg');" href="{{ url_for('login') }}">Enter</a></li>
-                    </ul>
-                </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Home - IA para previsão de demanda</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" style="font-size:24px;" href="#features">DecisionAI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item"><a class="nav-link active" style="font-size:24px;" aria-current="page"
+                            href="#!">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" style="font-size:24px;" href="#features">About</a></li>
+                    <li class="nav-item"><a class="nav-link" style="font-size:24px;" href="#servico">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" style="font-size:24px;" href="#contato">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" style="font-size:20px; padding: 5px 20px"
+                            style="background-image: url('static\images\Retangulo_azul.jpeg');"
+                            href="{{ url_for('login') }}">Enter</a></li>
+                </ul>
             </div>
-        </nav>
-        <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-5">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="text-center my-5">
-                            <h1 class="display-5 fw-bolder text-white mb-2">Revolutionize your Business</h1>
-                            <p class="lead text-white-50 mb-4">Stock Demand Prediction, Loss Reductions, Stock loss Reduction, and much more!</p>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
-                                <a class="btn btn-outline-light btn-lg px-4" href="#!">Learn More</a>
-                            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center my-5">
+                        <h1 class="display-5 fw-bolder text-white mb-2">Inteligencia Artificial Para Minimizar Perda de
+                            Estoque</h1>
+                        <p class="lead text-white-50 mb-4">Previsao de Demanda de Produtos, Reduzindo Os Custos Com
+                            Estoques, Perdas Devido a Validade</p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Planos</a>
+                            <a class="btn btn-outline-light btn-lg px-4" href="#features">Saiba mais</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- Features section-->
-        <section class="py-5 border-bottom" id="features">
-            <div class="container px-5 my-5">
-                <div class="row gx-5">
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                        <h2 class="h4 fw-bolder">Real-Time Demand Forecasting</h2>
-                        <p style="color:#36A1B9">This service leverages advanced machine learning models to analyze current market trends, historical sales data, and various external factors such as economic indicators, seasonality, and social media trends to provide accurate, real-time demand forecasts. By continuously updating these forecasts, businesses can adjust their inventory levels dynamically, ensuring they have the right amount of stock to meet demand without overstocking.</p>
-                        <a class="text-decoration-none" href="#!">
-                        </a>
+        </div>
+    </header>
+    <!-- Features section-->
+    <section class="py-5 border-bottom" id="features">
+        <div class="container px-5 my-5">
+            <div class="row gx-5">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                            class="bi bi-collection"></i></div>
+                    <h2 class="h4 fw-bolder">Forecasting em tempo real de demanda</h2>
+                    <p style="color:#36A1B9">Este serviço aproveita modelos avançados de aprendizado de máquina para
+                        analisar tendências de mercado, dados históricos de vendas e vários fatores externos, como
+                        indicadores
+                        econômicos, sazonalidade e tendências de mídia social para fornecer previsões de demanda
+                        precisas e em tempo
+                        real. Por atualizando continuamente essas previsões, as empresas podem ajustar seus níveis de
+                        estoque de
+                        forma dinâmica, garantindo que eles tenham a quantidade certa de estoque para atender à demanda
+                        sem excesso de
+                        estoque.</p>
+                    <a class="text-decoration-none" href="#!">
+                    </a>
+                </div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i>
                     </div>
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                        <h2 class="h4 fw-bolder">Inventory Optimization</h2>
-                        <p style="color:#36A1B9">Inventory optimization is at the heart of reducing excess stock. This feature uses sophisticated algorithms to recommend optimal stock levels for each product, considering lead times, supplier reliability, and the cost of holding inventory. It helps businesses maintain a lean inventory, minimizing holding costs and reducing the risk of stock obsolescence, while still being prepared to meet customer demand efficiently.</p>
-                        <a class="text-decoration-none" href="#!">
-                        </a>
+                    <h2 class="h4 fw-bolder">Optimização de Estoques</h2>
+                    <p style="color:#36A1B9">Diminua a quantidade de produtos dentro dos seus estoques com o
+                        conhecimento das demandas dos seus
+                        clientes em tempo real, comprando somente o que for preciso para a venda!.</p>
+                    <a class="text-decoration-none" href="#!">
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                        <h2 class="h4 fw-bolder">Market Trend Analysis</h2>
-                        <p style="color:#36A1B9">Understanding and adapting to market trends is crucial for staying competitive. This feature provides in-depth analysis of market trends, identifying emerging patterns, customer preferences, and potential disruptions in supply and demand. It offers actionable insights that businesses can use to adjust their strategies, such as diversifying product offerings or launching promotions for products predicted to be in high demand, ensuring they capitalize on market opportunities and minimize losses due to unsold stock.</p>
-                        <a class="text-decoration-none" href="#!">
-                        </a>
-                    </div>
+                    <h2 class="h4 fw-bolder">Analise das Flutuações Economicas</h2>
+                    <p style="color:#36A1B9">Entendimento e adaptação das demandas por produtos dependendo das
+                        sazonalidade e variações de mercado
+                        em tempo real, garantindo um maior potencial de adaptação para as empresas parceiras, que se
+                        mantem atualizados no que é necessario.</p>
+                    <a class="text-decoration-none" href="#!">
+                    </a>
                 </div>
             </div>
-        </section>
-        <!-- Pricing section-->
-        <section class="bg-dark py-5 border-bottom" id="servico">
-            <div class="container px-5 my-5">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bolder">Pay as you grow</h2>
-                    <p class="lead mb-0">With our no hassle pricing plans</p>
-                </div>
-                <div class="row gx-5 justify-content-center">
-                    <!-- Pricing card free-->
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="card mb-5 mb-xl-0">
-                            <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold text-muted">Free</div>
-                                <div class="mb-3">
-                                    <span class="display-4 fw-bold">$0</span>
-                                    <span class="text-muted">/ mo.</span>
-                                </div>
-                                <ul class="list-unstyled mb-4">
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        <strong>1 users</strong>
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        5GB storage
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Unlimited public projects
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Community access
-                                    </li>
-                                    <li class="mb-2 text-muted">
-                                        <i class="bi bi-x"></i>
-                                        Unlimited private projects
-                                    </li>
-                                    <li class="mb-2 text-muted">
-                                        <i class="bi bi-x"></i>
-                                        Dedicated support
-                                    </li>
-                                    <li class="mb-2 text-muted">
-                                        <i class="bi bi-x"></i>
-                                        Free linked domain
-                                    </li>
-                                    <li class="text-muted">
-                                        <i class="bi bi-x"></i>
-                                        Monthly status reports
-                                    </li>
-                                </ul>
-                                <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
+        </div>
+    </section>
+    <!-- Pricing section-->
+    <section class="bg-dark py-5 border-bottom" id="servico">
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bolder">Aumente Enquanto Cresce!</h2>
+                <p class="lead mb-0"></p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <!-- Pricing card free-->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="card mb-5 mb-xl-0">
+                        <div class="card-body p-5">
+                            <div class="small text-uppercase fw-bold text-muted">Gratis</div>
+                            <div class="mb-3">
+                                <span class="display-4 fw-bold">$0</span>
+                                <span class="text-muted">/ mes.</span>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Pricing card pro-->
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="card mb-5 mb-xl-0">
-                            <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    Pro
-                                </div>
-                                <div class="mb-3">
-                                    <span class="display-4 fw-bold">$9</span>
-                                    <span class="text-muted">/ mo.</span>
-                                </div>
-                                <ul class="list-unstyled mb-4">
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        <strong>5 users</strong>
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        5GB storage
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Unlimited public projects
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Community access
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Unlimited private projects
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Dedicated support
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Free linked domain
-                                    </li>
-                                    <li class="text-muted">
-                                        <i class="bi bi-x"></i>
-                                        Monthly status reports
-                                    </li>
-                                </ul>
-                                <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Pricing card enterprise-->
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="card">
-                            <div class="card-body p-5">
-                                <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
-                                <div class="mb-3">
-                                    <span class="display-4 fw-bold">$49</span>
-                                    <span class="text-muted">/ mo.</span>
-                                </div>
-                                <ul class="list-unstyled mb-4">
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        <strong>Unlimited users</strong>
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        5GB storage
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Unlimited public projects
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Community access
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Unlimited private projects
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Dedicated support
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-check text-primary"></i>
-                                        <strong>Unlimited</strong>
-                                        linked domains
-                                    </li>
-                                    <li class="text-muted">
-                                        <i class="bi bi-check text-primary"></i>
-                                        Monthly status reports
-                                    </li>
-                                </ul>
-                                <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
-                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    <strong>1 usuario(empresa)</strong>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    limpeza de 10 mil linhas
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Projetos publicos ilimitados
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Suporte dedicado
+                                </li>
+                                <li class="mb-2 text-muted">
+                                    <i class="bi bi-x"></i>
+                                    limpeza de ate 1 milhao de linhas
+                                </li>
+                                <li class="mb-2 text-muted">
+                                    <i class="bi bi-x"></i>
+                                    Reunioes de Analise de sasonalidades
+                                </li>
+                                <li class="text-muted">
+                                    <i class="bi bi-x"></i>
+                                    Reports mensais
+                                </li>
+                            </ul>
+                            <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Escolher</a></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Contact section-->
-        <section class="bg-templete py-5" id="contato">
-            <div class="container px-5 my-5 px-5">
-                <div class="text-center mb-5">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
-                    <h2 class="fw-bolder">Contact us!</h2>
+                <!-- Pricing card pro-->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="card mb-5 mb-xl-0">
+                        <div class="card-body p-5">
+                            <div class="small text-uppercase fw-bold">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                Pro
+                            </div>
+                            <div class="mb-3">
+                                <span class="display-4 fw-bold">$20</span>
+                                <span class="text-muted">/ mensais.</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    <strong>5 usuarios</strong>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    limpeza de 100 mil linhas
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Projetos publicos ilimitados
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Suporte dedicado
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Limpeza de ate 1 milhao de linhas
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Reunioes de analise de sasonalidades
+                                </li>
+                                <li class="text-muted">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Reports mensais
+                                </li>
+                            </ul>
+                            <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                <!-- Pricing card enterprise-->
+                <div class="col-lg-6 col-xl-4">
+                    <div class="card">
+                        <div class="card-body p-5">
+                            <div class="small text-uppercase fw-bold text-muted">Multinacional</div>
+                            <div class="mb-3">
+                                <span class="display-4 fw-bold">$50</span>
+                                <span class="text-muted">/ mensais.</span>
                             </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    <br />
-                                    <a></a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
-                        </form>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    <strong>5 usuarios</strong>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    limpeza de 100 mil linhas
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Projetos publicos ilimitados
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Suporte dedicado
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Limpeza de ate 1 milhao de linhas
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Reunioes de analise de sasonalidades
+                                </li>
+                                <li class="text-muted">
+                                    <i class="bi bi-check text-primary"></i>
+                                    Reports semanais
+                                </li>
+                            </ul>
+                            <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="footer-content">
-                <div class="logo-text-container">
-                    <div class="logo-label logo-label-1"></div>
-                    <p class="logo-text logo-color">DecisionAI</p>
+        </div>
+    </section>
+    <!-- Contact section-->
+    <section class="bg-templete py-5" id="contato">
+        <div class="container px-5 my-5 px-5">
+            <div class="text-center mb-5">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i>
                 </div>
-                <div class="logo-text-container">
-                    <div class="logo-label logo-label-2"></div>
-                    <p class="logo-text-2 logo-color">(55) 62 99631-1371</p>
-                </div>
-                <div class="logo-text-container">
-                    <div class="logo-label logo-label-3"></div>
-                    <p class="logo-text-2 logo-color">DecisionAI@gmail.com</p>
-                </div>
-                <div class="logo-text-container-2">
-                    <div class="logo-label logo-label-4"></div>
-                </div>
-                <div class="logo-text-container-2">
-                    <div class="logo-label logo-label-5"></div>
-                </div>
-                <div class="logo-text-container-2">
-                    <div class="logo-label logo-label-6"></div>
-                </div>
-                <div class="logo-text-container-2">
-                    <div class="logo-label logo-label-7"></div>
+                <h2 class="fw-bolder">Contact us!</h2>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..."
+                                data-sb-validations="required" />
+                            <label for="name">Full name</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com"
+                                data-sb-validations="required,email" />
+                            <label for="email">Email address</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+                                data-sb-validations="required" />
+                            <label for="phone">Phone number</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+                            </div>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text"
+                                placeholder="Enter your message here..." style="height: 10rem"
+                                data-sb-validations="required"></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
+                            </div>
+                        </div>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                <br />
+                                <a></a>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton"
+                                type="submit">Submit</button></div>
+                    </form>
                 </div>
             </div>
-            <div class="container px-5">
-                <p class="m-0 text-center text-white">Copyright &copy; DecisionAI 2024</p>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="footer-content">
+            <div class="logo-text-container">
+                <div class="logo-label logo-label-1"></div>
+                <p class="logo-text logo-color">DecisionAI</p>
             </div>
-        </footer>        
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+            <div class="logo-text-container">
+                <div class="logo-label logo-label-2"></div>
+                <p class="logo-text-2 logo-color">(55) 62 99631-1371</p>
+            </div>
+            <div class="logo-text-container">
+                <div class="logo-label logo-label-3"></div>
+                <p class="logo-text-2 logo-color">DecisionAI@gmail.com</p>
+            </div>
+            <div class="logo-text-container-2">
+                <div class="logo-label logo-label-4"></div>
+            </div>
+            <div class="logo-text-container-2">
+                <div class="logo-label logo-label-5"></div>
+            </div>
+            <div class="logo-text-container-2">
+                <div class="logo-label logo-label-6"></div>
+            </div>
+            <div class="logo-text-container-2">
+                <div class="logo-label logo-label-7"></div>
+            </div>
+        </div>
+        <div class="container px-5">
+            <p class="m-0 text-center text-white">Copyright &copy; DecisionAI 2024</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
 </html>

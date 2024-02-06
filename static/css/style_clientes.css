@@ -3,7 +3,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: #000;
+  background: rgba(33, 37, 41, 1);
   /* Assuming you want a black background for the whole page */
   color: #fff;
   /* Default text color set to white */
@@ -13,7 +13,7 @@ form {
   background: #fff;
   padding: 80px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(33, 37, 41, 1);
   min-height: 300px;
   min-width: 300px;
 }
@@ -140,8 +140,7 @@ footer.py-5.bg-dark {
 }
 
 footer .logo-text-container {
-  /* Your styles for the logo and text containers */
-  /* ... */
+  color: rgba(33, 37, 41, 1);
 }
 
 footer .logo-label {
@@ -156,8 +155,7 @@ footer .logo-label {
 }
 
 footer .logo-text {
-  /* Your styles for the text */
-  /* ... */
+  color: rgba(33, 37, 41, 1);
 }
 
 footer .container {
@@ -223,6 +221,12 @@ footer p {
   background-image: url("../images/Retangulo_vermelho.jpeg");
 }
 
+
+.label-text {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .link-group span {
   display: inline;
   margin: 0 30px;
@@ -234,7 +238,7 @@ footer p {
 }
 
 form {
-  background: #fff;
+  background-image: url(../images/fundo.jpg);
   padding: 80px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -262,8 +266,8 @@ form {
 }
 
 button {
-  padding: 10px 25px;
-  margin-right: auto;
+  padding: 15px 500px;
+
   border: none;
   border-radius: 4px;
   background-color: #007bff;
