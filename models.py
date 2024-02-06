@@ -6,7 +6,7 @@ from extensions import login_manager
 
 @login_manager.user_loader
 def get_user(user_id):
-    return User.query.filter_by(id=user_id)
+    return User.query.get(int(user_id))
 
 class Cliente(db.Model):
     id = db.Column(db.Integer, primary_key=True)

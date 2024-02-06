@@ -91,33 +91,54 @@ def contato():
     return render_template('contato.html')
 
 @app.route('/clientes')
-def clientes():
-    return render_template('clientes.html')
-
-@app.route('/adicionar_cliente', methods=['GET', 'POST'])
 @login_required
-def adicionar_cliente():
+def clientes():
     if request.method == 'POST':
         genero = request.form['genero']
         idade = request.form['idade']
-        nome = request.form['nome']
+        nome = request.form['name']
         cpf = request.form['cpf']
-        cond = request.form['cond']
+        cond = request.form['cond-eco']
 
         cliente_existe = Cliente.query.filter_by(cpf=cpf, user_id=current_user.id).first()
 
         if cliente_existe:
             flash('Já existe um cliente com este CPF para o usuário atual.')
-            return redirect(url_for('clientes'))
+            return render_template('clientes.html')
 
         novo_cliente = Cliente(genero=genero, idade=idade, nome=nome, cpf=cpf, cond=cond, user_id=current_user.id)
         db.session.add(novo_cliente)
         db.session.commit()
 
         flash('Cliente adicionado com sucesso.')
-        return redirect(url_for('clientes'))
+        return render_template('clientes.html')
     
     return render_template('clientes.html')
+
+'''@app.route('/adicionar_cliente', methods=['GET', 'POST'])
+@login_required
+def adicionar_cliente():
+    if request.method == 'POST':
+        genero = request.form['genero']
+        idade = request.form['idade']
+        nome = request.form['name']
+        cpf = request.form['cpf']
+        cond = request.form['cond-eco']
+
+        cliente_existe = Cliente.query.filter_by(cpf=cpf, user_id=current_user.id).first()
+
+        if cliente_existe:
+            flash('Já existe um cliente com este CPF para o usuário atual.')
+            return render_template('clientes.html')
+
+        novo_cliente = Cliente(genero=genero, idade=idade, nome=nome, cpf=cpf, cond=cond, user_id=current_user.id)
+        db.session.add(novo_cliente)
+        db.session.commit()
+
+        flash('Cliente adicionado com sucesso.')
+        return render_template('clientes.html')
+    
+    return render_template('clientes.html')'''
 
 
 if __name__ == '__main__':
