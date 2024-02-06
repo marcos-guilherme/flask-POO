@@ -90,7 +90,7 @@ def recuperar_senha():
 def contato():
     return render_template('contato.html')
 
-@app.route('/clientes')
+@app.route('/clientes', methods=['GET', 'POST'])
 @login_required
 def clientes():
     if request.method == 'POST':
